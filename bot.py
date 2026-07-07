@@ -6,14 +6,14 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
+import os 
 import requests
 
 
 BOT_TOKEN ="8842471120:AAHiXikuxJCm3X_YgUniKDOBcpLBJU5jsHY"
 
 
-OPENROUTER_API_KEY = import os.getenv(OPENROUTER_API_KEY)
-
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 
 
