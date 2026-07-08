@@ -78,11 +78,6 @@ import asyncio
 
 print("Bot Running...")
 
-async def main():
-    await app.initialize()
-    await app.start()
-    await app.updater.start_polling()
-    await asyncio.Event().wait()
-
 if __name__ == "__main__":
-    asyncio.run(main())
+    print("Bot Running...")
+    app.run_polling(close_loop=False)
