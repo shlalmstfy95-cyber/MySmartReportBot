@@ -68,21 +68,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "حدث خطأ أثناء إنشاء التقرير."
         )
 
-from telegram.ext import ApplicationBuilder, CommandHandler
-
-# دالة معالجة الأوامر يجب أن تكون متزامنة (async)
-async def start(update, context):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="أهلاً بك!")
-
-if __name__ == '__main__':
-    # بناء التطبيق باستخدام التوكن الخاص بك
-    app = ApplicationBuilder().token("YOUR_BOT_TOKEN").build()
-
-    # إضافة المعالجات (Handlers) إلى كائن app مباشرة وليس updater
-    app.add_handler(CommandHandler("start", start))
-
-    # تشغيل البوت بنظام Polling
-    app.run_polling()
+app = Application.builder().token(BOT_TOKEN).build()
 
 
 app.add_handler(CommandHandler("start", start))
